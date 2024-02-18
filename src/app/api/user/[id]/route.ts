@@ -12,6 +12,8 @@ export async function GET(req: Request, { params }: ParamsType) {
   const id = parseInt(params.id);
   const foundUser = usersData.find((user) => user.id === id);
 
+  console.log(foundUser);
+
   if (!foundUser) {
     return NextResponse.json({ message: "User not found" }, { status: 404 });
   }
