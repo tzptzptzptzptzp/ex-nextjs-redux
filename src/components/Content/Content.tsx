@@ -1,25 +1,15 @@
 import { useDispatch } from "react-redux";
-import useSWR from "swr";
 
-import { updateUser } from "@/reducks/user/slice";
-import { userMockData } from "@/data/user.data";
 import { UserProfile } from "../UserProfile/UserProfile";
-
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+import { AppDispatch } from "@/reducks/store";
+import { getUser } from "@/reducks/user/operations";
 
 export const Content = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleClick = () => {
-    dispatch(updateUser(userMockData));
+    dispatch(getUser("2")).catch((err) => console.error(err));
   };
-
-  const { data, error, isLoading } = useSWR(
-    "http://localhost:3000/api/user/1",
-    fetcher
-  );
-
-  console.log(data);
 
   return (
     <div className="flex flex-col gap-4 w-96 p-8 shadow-lg">
