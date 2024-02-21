@@ -1,8 +1,11 @@
 import { useState } from "react";
 
-export const Counter = () => {
-  const [count, setCount] = useState(1);
+type Props = {
+  count: number;
+  setCount: React.Dispatch<React.SetStateAction<number>>;
+};
 
+export const Counter = ({ count, setCount }: Props) => {
   const handleIncrement = () => {
     setCount((count) => {
       if (count < 10) {
@@ -21,6 +24,7 @@ export const Counter = () => {
       }
     });
   };
+
   return (
     <div className="flex justify-center gap-4 w-full">
       <button onClick={handleDecrement}>ー</button>
