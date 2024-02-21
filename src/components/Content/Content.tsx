@@ -13,7 +13,7 @@ export const Content = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   const handleClick = () => {
-    dispatch(getUser("2")).catch((err) => console.error(err));
+    dispatch(getUser(count.toString())).catch((err) => console.error(err));
   };
 
   return (
