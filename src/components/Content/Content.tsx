@@ -1,16 +1,14 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-import { AppDispatch } from "@/reducks/store";
+import { AppDispatch, RootState } from "@/reducks/store";
 import { getUser } from "@/reducks/user/operations";
 
 import { Counter } from "../Counter/Counter";
 import { UserProfile } from "../UserProfile/UserProfile";
 
 export const Content = () => {
-  const [count, setCount] = useState(1);
-
   const dispatch = useDispatch<AppDispatch>();
+  const count = useSelector((state: RootState) => state.count.count);
 
   const handleClick = () => {
     dispatch(getUser(count.toString())).catch((err) => console.error(err));
