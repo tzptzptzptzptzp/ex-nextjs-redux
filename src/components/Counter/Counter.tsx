@@ -1,28 +1,16 @@
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import countSlice from "@/reducks/count/slice";
+import { RootState } from "@/reducks/store";
 
-type Props = {
-  count: number;
-  setCount: React.Dispatch<React.SetStateAction<number>>;
-};
+export const Counter = () => {
+  const dispatch = useDispatch();
+  const count = useSelector((state: RootState) => state.count.count);
 
-export const Counter = ({ count, setCount }: Props) => {
   const handleIncrement = () => {
-    setCount((count) => {
-      if (count < 10) {
-        return count + 1;
-      } else {
-        return count;
-      }
-    });
+    dispatch(countSlice.actions.incrementCount());
   };
   const handleDecrement = () => {
-    setCount((count) => {
-      if (count > 1) {
-        return count - 1;
-      } else {
-        return count;
-      }
-    });
+    dispatch(countSlice.actions.decrementCount());
   };
 
   return (
