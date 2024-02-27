@@ -11,10 +11,17 @@ type Address = {
   geo: Geo;
 };
 
-export type UserStateType = {
+type UserType = {
   id: number;
   name: string;
   username: string;
   email: string;
   address: Address;
+};
+
+export type UserStateType = {
+  user: UserType;
+  loading: boolean;
+  error: boolean;
+  errorMessage: string;
 };
