@@ -6,8 +6,13 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/reducks/store";
 
 export const UserProfile = () => {
-  const user = useSelector((state: RootState) => state.user);
+  const user = useSelector((state: RootState) => state.user.user);
+  const loading = useSelector((state: RootState) => state.user.loading);
+
   const path = usePathname();
+
+  if (loading) return <div>...loading</div>;
+
   return (
     <div>
       <div className="flex gap-2">

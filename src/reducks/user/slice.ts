@@ -12,11 +12,31 @@ const userSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(getUser.pending, (state) => {});
-    builder.addCase(getUser.fulfilled, (state, action) => {
-      return { ...state, ...action.payload };
+    builder.addCase(getUser.pending, (state) => {
+      return {
+        ...state,
+        loading: true,
+        error: false,
+        errorMessage: "",
+      };
     });
-    builder.addCase(getUser.rejected, (state) => {});
+    builder.addCase(getUser.rejected, (state) => {
+      return {
+        ...state,
+        loading: false,
+        error: true,
+        errorMessage: "Failed to fetch user data",
+      };
+    });
+    builder.addCase(getUser.fulfilled, (state, action) => {
+      return {
+        ...state,
+        user: action.payload,
+        loading: false,
+        error: false,
+        errorMessage: "",
+      };
+    });
   },
 });
 
