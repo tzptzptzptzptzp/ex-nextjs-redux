@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 紹介
 
-## Getting Started
+こちらは Next.js と Redux を使用したユーザーデータ取得アプリです。  
+ディレクトリ構成は Reducks パターンを使用しています。
 
-First, run the development server:
+## 使用技術
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+フロントエンド
+
+- [Next.js](https://nextjs.org/)
+- [React](https://ja.react.dev/)
+- [Redux](https://redux.js.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwindcss](https://tailwindcss.com/)
+
+## ディレクトリ構成
+
+```
+reducks/
+ ├── index.ts
+ ├── initializes.ts
+ ├── operations.ts
+ ├── reducers.ts
+ ├── selectors.ts
+ ├── slice.ts
+ ├── types.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 開発手順
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+npm を使用しています
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm
+npm run dev // 開発用サーバー起動
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Introduction
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This is a user data retrieval application built using Next.js and Redux.  
+The directory structure follows the Redux pattern.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on Vercel
+Frontend
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Directory Structure
+
+```
+reducks/
+ ├── index.ts
+ ├── initializes.ts
+ ├── operations.ts
+ ├── reducers.ts
+ ├── selectors.ts
+ ├── slice.ts
+ ├── types.ts
+```
+
+## Development Procedure
+
+We use npm for development.
+
+```bash
+npm
+npm run dev // Start the development server
+```
