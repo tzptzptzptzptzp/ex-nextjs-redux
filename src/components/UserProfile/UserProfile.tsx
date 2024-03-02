@@ -1,13 +1,10 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-import { useSelector } from "react-redux";
-import { RootState } from "@/reducks/store";
+import { userSelector } from "@/reducks/user/selectors";
 
 export const UserProfile = () => {
-  const user = useSelector((state: RootState) => state.user.user);
-  const loading = useSelector((state: RootState) => state.user.loading);
+  const { user, loading } = userSelector();
 
   const path = usePathname();
 
