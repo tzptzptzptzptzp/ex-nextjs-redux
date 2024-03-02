@@ -18,7 +18,6 @@
 
 ```
 reducks/
- ├── index.ts
  ├── initializes.ts
  ├── operations.ts
  ├── reducers.ts
@@ -58,7 +57,6 @@ Frontend
 
 ```
 reducks/
- ├── index.ts
  ├── initializes.ts
  ├── operations.ts
  ├── reducers.ts
