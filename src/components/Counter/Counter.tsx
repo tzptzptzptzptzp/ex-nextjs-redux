@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
+import { countSelector } from "@/reducks/count/selectors";
 import countSlice from "@/reducks/count/slice";
-import { RootState } from "@/reducks/store";
 
 export const Counter = () => {
   const dispatch = useDispatch();
-  const count = useSelector((state: RootState) => state.count.count);
+
+  const { count, loading } = countSelector();
 
   const handleIncrement = () => {
     dispatch(countSlice.actions.incrementCount());
@@ -17,7 +18,7 @@ export const Counter = () => {
     <div className="flex justify-center gap-4 w-full">
       <button onClick={handleDecrement}>ー</button>
       <div>
-        <p>{count}</p>
+        <p>{loading ? "...loading" : count}</p>
       </div>
       <button onClick={handleIncrement}>＋</button>
     </div>
