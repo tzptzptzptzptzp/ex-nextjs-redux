@@ -50,3 +50,58 @@ npm を使用しています
 npm
 npm run dev // 開発用サーバー起動
 ```
+
+---
+
+<br>
+
+# Redux State Management Learning Repository
+
+This repository was created to deeply explore state management with Redux. Instead of building actual applications, I focused on implementing the basics of Redux, its usage, and an effective directory structure. I adopted Next.js for building the frontend, incorporating the latest frontend technologies.
+
+## Main Features
+
+- **State Management with Redux**: Even with new state management libraries available, I aimed for a deep understanding of the widely used Redux. This has enabled me to acquire techniques useful in real-world development scenarios.
+- **Reducks Pattern**: By adopting the [Reducks pattern](https://github.com/alexnm/re-ducks), I modularized the logic by organizing folders by state, which improved scalability and maintainability.
+- **Data Fetching from JsonPlaceholder**: I fetched user data from the [JsonPlaceholder](https://jsonplaceholder.typicode.com/) API and managed it with Redux. This allowed me to implement a combination of asynchronous communication and state management.
+
+## Learning Goals
+
+- I have firmly grasped the basic concepts and usage of Redux.
+- I practiced managing data from asynchronous communications with Redux.
+- By using the Reducks pattern, I learned effective ways to use Redux in large-scale projects.
+- I have acquired advanced Redux techniques needed in real-world development.
+
+Through this repository, I have gained a broad knowledge of Redux, from the overview to advanced applications, enabling me to handle projects that require complex state management. By combining it with Next.js, I explored solutions to various challenges that might be encountered in actual projects. I tackled key topics in modern web app development, such as asynchronous data processing and state sharing between components, gaining practical skills.
+
+## Technologies Used
+
+Frontend
+
+- [Next.js](https://nextjs.org/)
+- [React](https://ja.react.dev/)
+- [Redux](https://redux.js.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwindcss](https://tailwindcss.com/)
+
+## Directory Structure
+
+```
+reducks/
+├── initializes.ts
+├── operations.ts
+├── reducers.ts
+├── selectors.ts
+├── slice.ts
+├── types.ts
+```
+
+## Development Process
+
+Using npm
+
+```bash
+npm install
+npm run dev // Start the development server
+```
